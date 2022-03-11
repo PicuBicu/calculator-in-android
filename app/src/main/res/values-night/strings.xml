@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="calculator">Calculator</string>
-    <string name="simple">Simple</string>
-    <string name="advanced">Advanced</string>
-    <string name="about">About</string>
-    <string name="exit">Exit</string>
-    <string name="applicationInformation">Calculator\nPiotr Błasiak\nThis application was prepared for study subject called Programming Mobile Applications.</string>
-</resources>

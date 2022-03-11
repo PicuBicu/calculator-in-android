@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000000"
     tools:context=".SimpleCalculatorActivity">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/smp_equationTextView"
         android:layout_width="0dp"
-        android:layout_height="50sp"
-        android:text="LICZBA"
+        android:layout_height="100sp"
+        android:text=""
         android:textAlignment="viewEnd"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,12 +20,12 @@
 
     <TableLayout
         android:id="@+id/tableLayout"
-        android:layout_width="405dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2">
+        app:layout_constraintTop_toBottomOf="@+id/smp_equationTextView">
 
         <TableRow
             android:layout_width="match_parent"
@@ -32,46 +33,49 @@
             android:layout_weight="1">
 
             <Button
-                android:id="@+id/bkspButton"
+                android:id="@+id/smp_bkspButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
                 android:layout_marginRight="2sp"
+                android:layout_marginBottom="2sp"
                 android:layout_weight="1"
                 android:paddingLeft="0sp"
                 android:paddingTop="0sp"
                 android:paddingRight="0sp"
                 android:paddingBottom="0sp"
-                android:text="Bksp"
-                app:cornerRadius="0sp" />
+                android:text="@string/backspace" />
 
             <Button
-                android:id="@+id/cButton"
+                android:id="@+id/smp_cButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
                 android:layout_marginRight="2sp"
+                android:layout_marginBottom="2sp"
                 android:layout_weight="1"
                 android:paddingLeft="0sp"
                 android:paddingTop="0sp"
                 android:paddingRight="0sp"
                 android:paddingBottom="0sp"
-                android:text="C"
-                app:cornerRadius="0sp" />
+                android:text="@string/c" />
 
             <Button
-                android:id="@+id/signButton"
+                android:id="@+id/smp_signButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
                 android:layout_marginRight="2sp"
+                android:layout_marginBottom="2sp"
                 android:layout_weight="1"
                 android:paddingLeft="0sp"
                 android:paddingTop="0sp"
                 android:paddingRight="0sp"
                 android:paddingBottom="0sp"
-                android:text="+/-"
-                app:cornerRadius="0sp" />
+                android:text="@string/sign" />
         </TableRow>
 
         <TableRow
@@ -80,185 +84,64 @@
             android:layout_weight="1">
 
             <Button
-                android:id="@+id/sevenButton"
+                android:id="@+id/smp_sevenButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
                 android:layout_marginRight="2sp"
+                android:layout_marginBottom="2sp"
                 android:layout_weight="1"
                 android:paddingLeft="0sp"
                 android:paddingTop="0sp"
                 android:paddingRight="0sp"
                 android:paddingBottom="0sp"
-                android:text="7"
-                app:cornerRadius="0sp" />
+                android:text="@string/seven" />
 
             <Button
-                android:id="@+id/eightButton"
+                android:id="@+id/smp_eightButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
                 android:layout_marginRight="2sp"
+                android:layout_marginBottom="2sp"
                 android:layout_weight="1"
                 android:paddingLeft="0sp"
                 android:paddingTop="0sp"
                 android:paddingRight="0sp"
                 android:paddingBottom="0sp"
-                android:text="8"
-                app:cornerRadius="0sp" />
+                android:text="@string/eight" />
 
             <Button
-                android:id="@+id/nineButton"
+                android:id="@+id/smp_nineButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
                 android:layout_marginRight="2sp"
+                android:layout_marginBottom="2sp"
                 android:layout_weight="1"
                 android:paddingLeft="0sp"
                 android:paddingTop="0sp"
                 android:paddingRight="0sp"
                 android:paddingBottom="0sp"
-                android:text="9"
-                app:cornerRadius="0sp" />
+                android:text="@string/nine" />
 
             <Button
-                android:id="@+id/divideButton"
+                android:id="@+id/smp_divideButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
                 android:layout_marginRight="2sp"
+                android:layout_marginBottom="2sp"
                 android:layout_weight="1"
                 android:paddingLeft="0sp"
                 android:paddingTop="0sp"
                 android:paddingRight="0sp"
                 android:paddingBottom="0sp"
-                android:text="/"
-                app:cornerRadius="0sp" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-
-            <Button
-                android:id="@+id/fourButton"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="2sp"
-                android:layout_marginRight="2sp"
-                android:layout_weight="1"
-                android:paddingLeft="0sp"
-                android:paddingTop="0sp"
-                android:paddingRight="0sp"
-                android:paddingBottom="0sp"
-                android:text="4"
-                app:cornerRadius="0sp" />
-
-            <Button
-                android:id="@+id/fiveButton"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="2sp"
-                android:layout_marginRight="2sp"
-                android:layout_weight="1"
-                android:paddingLeft="0sp"
-                android:paddingTop="0sp"
-                android:paddingRight="0sp"
-                android:paddingBottom="0sp"
-                android:text="5"
-                app:cornerRadius="0sp" />
-
-            <Button
-                android:id="@+id/sixButton"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="2sp"
-                android:layout_marginRight="2sp"
-                android:layout_weight="1"
-                android:paddingLeft="0sp"
-                android:paddingTop="0sp"
-                android:paddingRight="0sp"
-                android:paddingBottom="0sp"
-                android:text="6"
-                app:cornerRadius="0sp" />
-
-            <Button
-                android:id="@+id/multiplyButton"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="2sp"
-                android:layout_marginRight="2sp"
-                android:layout_weight="1"
-                android:paddingLeft="0sp"
-                android:paddingTop="0sp"
-                android:paddingRight="0sp"
-                android:paddingBottom="0sp"
-                android:text="*"
-                app:cornerRadius="0sp" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-
-            <Button
-                android:id="@+id/oneButton"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="2sp"
-                android:layout_marginRight="2sp"
-                android:layout_weight="1"
-                android:paddingLeft="0sp"
-                android:paddingTop="0sp"
-                android:paddingRight="0sp"
-                android:paddingBottom="0sp"
-                android:text="1"
-                app:cornerRadius="0sp" />
-
-            <Button
-                android:id="@+id/twoButton"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="2sp"
-                android:layout_marginRight="2sp"
-                android:layout_weight="1"
-                android:paddingLeft="0sp"
-                android:paddingTop="0sp"
-                android:paddingRight="0sp"
-                android:paddingBottom="0sp"
-                android:text="2"
-                app:cornerRadius="0sp" />
-
-            <Button
-                android:id="@+id/threeButton"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="2sp"
-                android:layout_marginRight="2sp"
-                android:layout_weight="1"
-                android:paddingLeft="0sp"
-                android:paddingTop="0sp"
-                android:paddingRight="0sp"
-                android:paddingBottom="0sp"
-                android:text="3"
-                app:cornerRadius="0sp" />
-
-            <Button
-                android:id="@+id/minusButton"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="2sp"
-                android:layout_marginRight="2sp"
-                android:layout_weight="1"
-                android:paddingLeft="0sp"
-                android:paddingTop="0sp"
-                android:paddingRight="0sp"
-                android:paddingBottom="0sp"
-                android:text="-"
-                app:cornerRadius="0sp" />
+                android:text="@string/divide" />
 
         </TableRow>
 
@@ -268,60 +151,197 @@
             android:layout_weight="1">
 
             <Button
-                android:id="@+id/zeroButton"
+                android:id="@+id/smp_fourButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
                 android:layout_marginRight="2sp"
+                android:layout_marginBottom="2sp"
                 android:layout_weight="1"
                 android:paddingLeft="0sp"
                 android:paddingTop="0sp"
                 android:paddingRight="0sp"
                 android:paddingBottom="0sp"
-                android:text="0"
-                app:cornerRadius="0sp" />
+                android:text="@string/four" />
 
             <Button
-                android:id="@+id/dotButton"
+                android:id="@+id/smp_fiveButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
                 android:layout_marginRight="2sp"
+                android:layout_marginBottom="2sp"
                 android:layout_weight="1"
                 android:paddingLeft="0sp"
                 android:paddingTop="0sp"
                 android:paddingRight="0sp"
                 android:paddingBottom="0sp"
-                android:text="."
-                app:cornerRadius="0sp" />
+                android:text="@string/five" />
 
             <Button
-                android:id="@+id/equalsButton"
+                android:id="@+id/smp_sixButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
                 android:layout_marginRight="2sp"
+                android:layout_marginBottom="2sp"
                 android:layout_weight="1"
                 android:paddingLeft="0sp"
                 android:paddingTop="0sp"
                 android:paddingRight="0sp"
                 android:paddingBottom="0sp"
-                android:text="="
-                app:cornerRadius="0sp" />
+                android:text="@string/six" />
 
             <Button
-                android:id="@+id/plusButton"
+                android:id="@+id/smp_multiplyButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
                 android:layout_marginRight="2sp"
+                android:layout_marginBottom="2sp"
                 android:layout_weight="1"
                 android:paddingLeft="0sp"
                 android:paddingTop="0sp"
                 android:paddingRight="0sp"
                 android:paddingBottom="0sp"
-                android:text="+"
-                app:cornerRadius="0sp" />
+                android:text="@string/multiply" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/smp_oneButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
+                android:layout_marginRight="2sp"
+                android:layout_marginBottom="2sp"
+                android:layout_weight="1"
+                android:paddingLeft="0sp"
+                android:paddingTop="0sp"
+                android:paddingRight="0sp"
+                android:paddingBottom="0sp"
+                android:text="@string/one" />
+
+            <Button
+                android:id="@+id/smp_twoButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
+                android:layout_marginRight="2sp"
+                android:layout_marginBottom="2sp"
+                android:layout_weight="1"
+                android:paddingLeft="0sp"
+                android:paddingTop="0sp"
+                android:paddingRight="0sp"
+                android:paddingBottom="0sp"
+                android:text="@string/two" />
+
+            <Button
+                android:id="@+id/smp_threeButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
+                android:layout_marginRight="2sp"
+                android:layout_marginBottom="2sp"
+                android:layout_weight="1"
+                android:paddingLeft="0sp"
+                android:paddingTop="0sp"
+                android:paddingRight="0sp"
+                android:paddingBottom="0sp"
+                android:text="@string/three" />
+
+            <Button
+                android:id="@+id/smp_minusButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
+                android:layout_marginRight="2sp"
+                android:layout_marginBottom="2sp"
+                android:layout_weight="1"
+                android:paddingLeft="0sp"
+                android:paddingTop="0sp"
+                android:paddingRight="0sp"
+                android:paddingBottom="0sp"
+                android:text="@string/minus" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/smp_zeroButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
+                android:layout_marginRight="2sp"
+                android:layout_marginBottom="2sp"
+                android:layout_weight="1"
+                android:paddingLeft="0sp"
+                android:paddingTop="0sp"
+                android:paddingRight="0sp"
+                android:paddingBottom="0sp"
+                android:text="@string/zero" />
+
+            <Button
+                android:id="@+id/smp_dotButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
+                android:layout_marginRight="2sp"
+                android:layout_marginBottom="2sp"
+                android:layout_weight="1"
+                android:paddingLeft="0sp"
+                android:paddingTop="0sp"
+                android:paddingRight="0sp"
+                android:paddingBottom="0sp"
+                android:text="@string/dot" />
+
+            <Button
+                android:id="@+id/smp_equalsButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
+                android:layout_marginRight="2sp"
+                android:layout_marginBottom="2sp"
+                android:layout_weight="1"
+                android:paddingLeft="0sp"
+                android:paddingTop="0sp"
+                android:paddingRight="0sp"
+                android:paddingBottom="0sp"
+                android:text="@string/equals" />
+
+            <Button
+                android:id="@+id/smp_plusButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
+                android:layout_marginRight="2sp"
+                android:layout_marginBottom="2sp"
+                android:layout_weight="1"
+                android:paddingLeft="0sp"
+                android:paddingTop="0sp"
+                android:paddingRight="0sp"
+                android:paddingBottom="0sp"
+                android:text="@string/plus" />
         </TableRow>
     </TableLayout>
 
