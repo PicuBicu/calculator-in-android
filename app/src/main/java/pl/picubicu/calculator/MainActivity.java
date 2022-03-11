@@ -10,6 +10,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button aboutButton;
     private Button exitButton;
+    private Button simpleButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         handleAboutActivity();
         handleExit();
+        handleSimpleActivity();
     }
 
     private void handleAboutActivity() {
@@ -31,4 +33,10 @@ public class MainActivity extends AppCompatActivity {
         this.exitButton.setOnClickListener((view) -> finish());
     }
 
+    private void handleSimpleActivity() {
+        this.simpleButton = findViewById(R.id.simpleButton);
+        this.simpleButton.setOnClickListener((view) -> {
+            startActivity(new Intent(MainActivity.this, SimpleCalculatorActivity.class));
+        });
+    }
 }
