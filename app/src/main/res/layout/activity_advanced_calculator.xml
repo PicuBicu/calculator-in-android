@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".AdvancedCalculatorActivity">
+
+    <TextView
+        android:id="@+id/adv_equationTextView"
+        android:layout_width="0dp"
+        android:layout_height="100sp"
+        android:text=""
+        android:textAlignment="viewEnd"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:id="@+id/tableLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adv_equationTextView">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/adv_bkspButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
+                android:layout_marginEnd="2sp"
+                android:layout_marginRight="2sp"
+                android:layout_weight="1"
+                android:paddingLeft="0sp"
+                android:paddingTop="0sp"
+                android:paddingRight="0sp"
+                android:paddingBottom="0sp"
+                android:text="@string/backspace" />
+
+            <Button
+                android:id="@+id/adv_cButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
+                android:layout_marginEnd="2sp"
+                android:layout_marginRight="2sp"
+                android:layout_weight="2"
+                android:paddingLeft="0sp"
+                android:paddingTop="0sp"
+                android:paddingRight="0sp"
+                android:paddingBottom="0sp"
+                android:text="@string/c" />
+
+            <Button
+                android:id="@+id/adv_signButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
+                android:layout_marginEnd="2sp"
+                android:layout_marginRight="2sp"
+                android:layout_weight="1"
+                android:paddingLeft="0sp"
+                android:paddingTop="0sp"
+                android:paddingRight="0sp"
+                android:paddingBottom="0sp"
+                android:text="@string/sign" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/adv_sinButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
+                android:layout_marginEnd="2sp"
+                android:layout_marginRight="2sp"
+                android:layout_weight="1"
+                android:paddingLeft="0sp"
+                android:paddingTop="0sp"
+                android:paddingRight="0sp"
+                android:paddingBottom="0sp"
+                android:text="@string/sin" />
+
+            <Button
+                android:id="@+id/adv_cosButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
+                android:layout_marginEnd="2sp"
+                android:layout_marginRight="2sp"
+                android:layout_weight="1"
+                android:paddingLeft="0sp"
+                android:paddingTop="0sp"
+                android:paddingRight="0sp"
+                android:paddingBottom="0sp"
+                android:text="@string/cos" />
+
+            <Button
+                android:id="@+id/adv_tanButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
+                android:layout_marginEnd="2sp"
+                android:layout_marginRight="2sp"
+                android:layout_weight="1"
+                android:paddingLeft="0sp"
+                android:paddingTop="0sp"
+                android:paddingRight="0sp"
+                android:paddingBottom="0sp"
+                android:text="@string/tan" />
+
+            <Button
+                android:id="@+id/adv_lnButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
+                android:layout_marginEnd="2sp"
+                android:layout_marginRight="2sp"
+                android:layout_weight="1"
+                android:paddingLeft="0sp"
+                android:paddingTop="0sp"
+                android:paddingRight="0sp"
+                android:paddingBottom="0sp"
+                android:text="@string/ln" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/adv_sqrtButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
+                android:layout_marginEnd="2sp"
+                android:layout_marginRight="2sp"
+                android:layout_weight="1"
+                android:paddingLeft="0sp"
+                android:paddingTop="0sp"
+                android:paddingRight="0sp"
+                android:paddingBottom="0sp"
+                android:text="@string/sqrt" />
+
+            <Button
+                android:id="@+id/adv_x2Button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
+                android:layout_marginEnd="2sp"
+                android:layout_marginRight="2sp"
+                android:layout_weight="1"
+                android:paddingLeft="0sp"
+                android:paddingTop="0sp"
+                android:paddingRight="0sp"
+                android:paddingBottom="0sp"
+                android:text="@string/x_2" />
+
+            <Button
+                android:id="@+id/adv_xyButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
+                android:layout_marginEnd="2sp"
+                android:layout_marginRight="2sp"
+                android:layout_weight="1"
+                android:paddingLeft="0sp"
+                android:paddingTop="0sp"
+                android:paddingRight="0sp"
+                android:paddingBottom="0sp"
+                android:text="@string/x_y" />
+
+            <Button
+                android:id="@+id/adv_logButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
+                android:layout_marginEnd="2sp"
+                android:layout_marginRight="2sp"
+                android:layout_weight="1"
+                android:paddingLeft="0sp"
+                android:paddingTop="0sp"
+                android:paddingRight="0sp"
+                android:paddingBottom="0sp"
+                android:text="@string/log" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/adv_sevenButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
+                android:layout_marginEnd="2sp"
+                android:layout_marginRight="2sp"
+                android:layout_weight="1"
+                android:paddingLeft="0sp"
+                android:paddingTop="0sp"
+                android:paddingRight="0sp"
+                android:paddingBottom="0sp"
+                android:text="@string/seven" />
+
+            <Button
+                android:id="@+id/adv_eightButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
+                android:layout_marginEnd="2sp"
+                android:layout_marginRight="2sp"
+                android:layout_weight="1"
+                android:paddingLeft="0sp"
+                android:paddingTop="0sp"
+                android:paddingRight="0sp"
+                android:paddingBottom="0sp"
+                android:text="@string/eight" />
+
+            <Button
+                android:id="@+id/adv_nineButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
+                android:layout_marginEnd="2sp"
+                android:layout_marginRight="2sp"
+                android:layout_weight="1"
+                android:paddingLeft="0sp"
+                android:paddingTop="0sp"
+                android:paddingRight="0sp"
+                android:paddingBottom="0sp"
+                android:text="@string/nine" />
+
+            <Button
+                android:id="@+id/adv_divideButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
+                android:layout_marginEnd="2sp"
+                android:layout_marginRight="2sp"
+                android:layout_weight="1"
+                android:paddingLeft="0sp"
+                android:paddingTop="0sp"
+                android:paddingRight="0sp"
+                android:paddingBottom="0sp"
+                android:text="@string/divide" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/adv_fourButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
+                android:layout_marginEnd="2sp"
+                android:layout_marginRight="2sp"
+                android:layout_weight="1"
+                android:paddingLeft="0sp"
+                android:paddingTop="0sp"
+                android:paddingRight="0sp"
+                android:paddingBottom="0sp"
+                android:text="@string/four" />
+
+            <Button
+                android:id="@+id/adv_fiveButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
+                android:layout_marginEnd="2sp"
+                android:layout_marginRight="2sp"
+                android:layout_weight="1"
+                android:paddingLeft="0sp"
+                android:paddingTop="0sp"
+                android:paddingRight="0sp"
+                android:paddingBottom="0sp"
+                android:text="@string/five" />
+
+            <Button
+                android:id="@+id/adv_sixButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
+                android:layout_marginEnd="2sp"
+                android:layout_marginRight="2sp"
+                android:layout_weight="1"
+                android:paddingLeft="0sp"
+                android:paddingTop="0sp"
+                android:paddingRight="0sp"
+                android:paddingBottom="0sp"
+                android:text="@string/six" />
+
+            <Button
+                android:id="@+id/adv_multiplyButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
+                android:layout_marginEnd="2sp"
+                android:layout_marginRight="2sp"
+                android:layout_weight="1"
+                android:paddingLeft="0sp"
+                android:paddingTop="0sp"
+                android:paddingRight="0sp"
+                android:paddingBottom="0sp"
+                android:text="@string/multiply" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/adv_oneButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
+                android:layout_marginEnd="2sp"
+                android:layout_marginRight="2sp"
+                android:layout_weight="1"
+                android:paddingLeft="0sp"
+                android:paddingTop="0sp"
+                android:paddingRight="0sp"
+                android:paddingBottom="0sp"
+                android:text="@string/one" />
+
+            <Button
+                android:id="@+id/adv_twoButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
+                android:layout_marginEnd="2sp"
+                android:layout_marginRight="2sp"
+                android:layout_weight="1"
+                android:paddingLeft="0sp"
+                android:paddingTop="0sp"
+                android:paddingRight="0sp"
+                android:paddingBottom="0sp"
+                android:text="@string/two" />
+
+            <Button
+                android:id="@+id/adv_threeButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
+                android:layout_marginEnd="2sp"
+                android:layout_marginRight="2sp"
+                android:layout_weight="1"
+                android:paddingLeft="0sp"
+                android:paddingTop="0sp"
+                android:paddingRight="0sp"
+                android:paddingBottom="0sp"
+                android:text="@string/three" />
+
+            <Button
+                android:id="@+id/adv_minusButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
+                android:layout_marginEnd="2sp"
+                android:layout_marginRight="2sp"
+                android:layout_weight="1"
+                android:paddingLeft="0sp"
+                android:paddingTop="0sp"
+                android:paddingRight="0sp"
+                android:paddingBottom="0sp"
+                android:text="@string/minus" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/adv_zeroButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
+                android:layout_marginEnd="2sp"
+                android:layout_marginRight="2sp"
+                android:layout_weight="1"
+                android:paddingLeft="0sp"
+                android:paddingTop="0sp"
+                android:paddingRight="0sp"
+                android:paddingBottom="0sp"
+                android:text="@string/zero" />
+
+            <Button
+                android:id="@+id/adv_dotButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
+                android:layout_marginEnd="2sp"
+                android:layout_marginRight="2sp"
+                android:layout_weight="1"
+                android:paddingLeft="0sp"
+                android:paddingTop="0sp"
+                android:paddingRight="0sp"
+                android:paddingBottom="0sp"
+                android:text="@string/dot" />
+
+            <Button
+                android:id="@+id/adv_equalsButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
+                android:layout_marginEnd="2sp"
+                android:layout_marginRight="2sp"
+                android:layout_weight="1"
+                android:paddingLeft="0sp"
+                android:paddingTop="0sp"
+                android:paddingRight="0sp"
+                android:paddingBottom="0sp"
+                android:text="@string/equals" />
+
+            <Button
+                android:id="@+id/adv_plusButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
+                android:layout_marginEnd="2sp"
+                android:layout_marginRight="2sp"
+                android:layout_weight="1"
+                android:paddingLeft="0sp"
+                android:paddingTop="0sp"
+                android:paddingRight="0sp"
+                android:paddingBottom="0sp"
+                android:text="@string/plus" />
+        </TableRow>
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
