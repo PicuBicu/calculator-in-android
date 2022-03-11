@@ -9,12 +9,14 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     private Button aboutButton;
+    private Button exitButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         handleAboutActivity();
+        handleExit();
     }
 
     private void handleAboutActivity() {
@@ -23,4 +25,10 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(MainActivity.this, AboutActivity.class));
         });
     }
+
+    private void handleExit() {
+        this.exitButton = findViewById(R.id.exitButton);
+        this.exitButton.setOnClickListener((view) -> finish());
+    }
+
 }
