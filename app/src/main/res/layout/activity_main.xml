@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".MainActivity">
 
     <TextView
@@ -11,6 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/calculator"
+        android:textColor="@android:color/holo_orange_dark"
         android:textSize="60sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,45 +31,52 @@
 
         <Button
             android:id="@+id/simpleButton"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:width="150sp"
             android:text="@string/simple"
+            android:textColor="@android:color/holo_orange_dark"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_width="match_parent" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/aboutButton"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:width="150sp"
             android:text="@string/about"
+            android:textColor="@android:color/holo_orange_dark"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/advancedButton"
-            android:layout_width="match_parent" />
+            app:layout_constraintTop_toBottomOf="@+id/advancedButton" />
 
         <Button
             android:id="@+id/advancedButton"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:width="150sp"
             android:text="@string/advanced"
+            android:textColor="@android:color/holo_orange_dark"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/simpleButton"
-            android:layout_width="match_parent" />
+            app:layout_constraintTop_toBottomOf="@+id/simpleButton" />
 
         <Button
             android:id="@+id/exitButton"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:width="150sp"
             android:text="@string/exit"
+            android:textColor="@android:color/holo_orange_dark"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/aboutButton"
-            android:layout_width="match_parent" />
+            app:layout_constraintTop_toBottomOf="@+id/aboutButton" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
