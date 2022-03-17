@@ -10,10 +10,11 @@
     <TextView
         android:id="@+id/smp_equationTextView"
         android:layout_width="0dp"
-        android:layout_height="100sp"
+        android:layout_height="150sp"
         android:text=""
         android:textAlignment="viewEnd"
-        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -34,48 +35,36 @@
 
             <Button
                 android:id="@+id/smp_bkspButton"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="2sp"
-                android:layout_marginTop="2sp"
-                android:layout_marginRight="2sp"
-                android:layout_marginBottom="2sp"
                 android:layout_weight="1"
-                android:paddingLeft="0sp"
-                android:paddingTop="0sp"
-                android:paddingRight="0sp"
-                android:paddingBottom="0sp"
-                android:text="@string/backspace" />
+                android:onClick="handleButton"
+                android:text="@string/backspace"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/smp_cButton"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="2sp"
-                android:layout_marginTop="2sp"
-                android:layout_marginRight="2sp"
-                android:layout_marginBottom="2sp"
                 android:layout_weight="1"
-                android:paddingLeft="0sp"
-                android:paddingTop="0sp"
-                android:paddingRight="0sp"
-                android:paddingBottom="0sp"
-                android:text="@string/c" />
+                android:onClick="handleButton"
+                android:text="@string/c"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/smp_signButton"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="2sp"
-                android:layout_marginTop="2sp"
-                android:layout_marginRight="2sp"
-                android:layout_marginBottom="2sp"
                 android:layout_weight="1"
-                android:paddingLeft="0sp"
-                android:paddingTop="0sp"
-                android:paddingRight="0sp"
-                android:paddingBottom="0sp"
-                android:text="@string/sign" />
+                android:onClick="handleButton"
+                android:text="@string/sign"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textSize="24sp" />
         </TableRow>
 
         <TableRow
@@ -85,63 +74,47 @@
 
             <Button
                 android:id="@+id/smp_sevenButton"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="2sp"
-                android:layout_marginTop="2sp"
-                android:layout_marginRight="2sp"
-                android:layout_marginBottom="2sp"
                 android:layout_weight="1"
-                android:paddingLeft="0sp"
-                android:paddingTop="0sp"
-                android:paddingRight="0sp"
-                android:paddingBottom="0sp"
-                android:text="@string/seven" />
+                android:onClick="handleButton"
+                android:text="@string/seven"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/smp_eightButton"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="2sp"
-                android:layout_marginTop="2sp"
-                android:layout_marginRight="2sp"
-                android:layout_marginBottom="2sp"
                 android:layout_weight="1"
-                android:paddingLeft="0sp"
-                android:paddingTop="0sp"
-                android:paddingRight="0sp"
-                android:paddingBottom="0sp"
-                android:text="@string/eight" />
+                android:onClick="handleButton"
+                android:text="@string/eight"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/smp_nineButton"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="2sp"
-                android:layout_marginTop="2sp"
-                android:layout_marginRight="2sp"
-                android:layout_marginBottom="2sp"
                 android:layout_weight="1"
-                android:paddingLeft="0sp"
-                android:paddingTop="0sp"
-                android:paddingRight="0sp"
-                android:paddingBottom="0sp"
-                android:text="@string/nine" />
+                android:onClick="handleButton"
+                android:text="@string/nine"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/smp_divideButton"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="2sp"
-                android:layout_marginTop="2sp"
-                android:layout_marginRight="2sp"
-                android:layout_marginBottom="2sp"
                 android:layout_weight="1"
-                android:paddingLeft="0sp"
-                android:paddingTop="0sp"
-                android:paddingRight="0sp"
-                android:paddingBottom="0sp"
-                android:text="@string/divide" />
+                android:onClick="handleButton"
+                android:text="@string/divide"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textSize="24sp" />
 
         </TableRow>
 
@@ -152,63 +125,47 @@
 
             <Button
                 android:id="@+id/smp_fourButton"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="2sp"
-                android:layout_marginTop="2sp"
-                android:layout_marginRight="2sp"
-                android:layout_marginBottom="2sp"
                 android:layout_weight="1"
-                android:paddingLeft="0sp"
-                android:paddingTop="0sp"
-                android:paddingRight="0sp"
-                android:paddingBottom="0sp"
-                android:text="@string/four" />
+                android:onClick="handleButton"
+                android:text="@string/four"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/smp_fiveButton"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="2sp"
-                android:layout_marginTop="2sp"
-                android:layout_marginRight="2sp"
-                android:layout_marginBottom="2sp"
                 android:layout_weight="1"
-                android:paddingLeft="0sp"
-                android:paddingTop="0sp"
-                android:paddingRight="0sp"
-                android:paddingBottom="0sp"
-                android:text="@string/five" />
+                android:onClick="handleButton"
+                android:text="@string/five"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/smp_sixButton"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="2sp"
-                android:layout_marginTop="2sp"
-                android:layout_marginRight="2sp"
-                android:layout_marginBottom="2sp"
                 android:layout_weight="1"
-                android:paddingLeft="0sp"
-                android:paddingTop="0sp"
-                android:paddingRight="0sp"
-                android:paddingBottom="0sp"
-                android:text="@string/six" />
+                android:onClick="handleButton"
+                android:text="@string/six"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/smp_multiplyButton"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="2sp"
-                android:layout_marginTop="2sp"
-                android:layout_marginRight="2sp"
-                android:layout_marginBottom="2sp"
                 android:layout_weight="1"
-                android:paddingLeft="0sp"
-                android:paddingTop="0sp"
-                android:paddingRight="0sp"
-                android:paddingBottom="0sp"
-                android:text="@string/multiply" />
+                android:onClick="handleButton"
+                android:text="@string/multiply"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textSize="24sp" />
         </TableRow>
 
         <TableRow
@@ -218,63 +175,47 @@
 
             <Button
                 android:id="@+id/smp_oneButton"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="2sp"
-                android:layout_marginTop="2sp"
-                android:layout_marginRight="2sp"
-                android:layout_marginBottom="2sp"
                 android:layout_weight="1"
-                android:paddingLeft="0sp"
-                android:paddingTop="0sp"
-                android:paddingRight="0sp"
-                android:paddingBottom="0sp"
-                android:text="@string/one" />
+                android:onClick="handleButton"
+                android:text="@string/one"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/smp_twoButton"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="2sp"
-                android:layout_marginTop="2sp"
-                android:layout_marginRight="2sp"
-                android:layout_marginBottom="2sp"
                 android:layout_weight="1"
-                android:paddingLeft="0sp"
-                android:paddingTop="0sp"
-                android:paddingRight="0sp"
-                android:paddingBottom="0sp"
-                android:text="@string/two" />
+                android:onClick="handleButton"
+                android:text="@string/two"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/smp_threeButton"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="2sp"
-                android:layout_marginTop="2sp"
-                android:layout_marginRight="2sp"
-                android:layout_marginBottom="2sp"
                 android:layout_weight="1"
-                android:paddingLeft="0sp"
-                android:paddingTop="0sp"
-                android:paddingRight="0sp"
-                android:paddingBottom="0sp"
-                android:text="@string/three" />
+                android:onClick="handleButton"
+                android:text="@string/three"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/smp_minusButton"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="2sp"
-                android:layout_marginTop="2sp"
-                android:layout_marginRight="2sp"
-                android:layout_marginBottom="2sp"
                 android:layout_weight="1"
-                android:paddingLeft="0sp"
-                android:paddingTop="0sp"
-                android:paddingRight="0sp"
-                android:paddingBottom="0sp"
-                android:text="@string/minus" />
+                android:onClick="handleButton"
+                android:text="@string/minus"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textSize="24sp" />
 
         </TableRow>
 
@@ -285,63 +226,47 @@
 
             <Button
                 android:id="@+id/smp_zeroButton"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="2sp"
-                android:layout_marginTop="2sp"
-                android:layout_marginRight="2sp"
-                android:layout_marginBottom="2sp"
                 android:layout_weight="1"
-                android:paddingLeft="0sp"
-                android:paddingTop="0sp"
-                android:paddingRight="0sp"
-                android:paddingBottom="0sp"
-                android:text="@string/zero" />
+                android:onClick="handleButton"
+                android:text="@string/zero"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/smp_dotButton"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="2sp"
-                android:layout_marginTop="2sp"
-                android:layout_marginRight="2sp"
-                android:layout_marginBottom="2sp"
                 android:layout_weight="1"
-                android:paddingLeft="0sp"
-                android:paddingTop="0sp"
-                android:paddingRight="0sp"
-                android:paddingBottom="0sp"
-                android:text="@string/dot" />
+                android:onClick="handleButton"
+                android:text="@string/dot"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/smp_equalsButton"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="2sp"
-                android:layout_marginTop="2sp"
-                android:layout_marginRight="2sp"
-                android:layout_marginBottom="2sp"
                 android:layout_weight="1"
-                android:paddingLeft="0sp"
-                android:paddingTop="0sp"
-                android:paddingRight="0sp"
-                android:paddingBottom="0sp"
-                android:text="@string/equals" />
+                android:onClick="handleButton"
+                android:text="@string/equals"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/smp_plusButton"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="2sp"
-                android:layout_marginTop="2sp"
-                android:layout_marginRight="2sp"
-                android:layout_marginBottom="2sp"
                 android:layout_weight="1"
-                android:paddingLeft="0sp"
-                android:paddingTop="0sp"
-                android:paddingRight="0sp"
-                android:paddingBottom="0sp"
-                android:text="@string/plus" />
+                android:onClick="handleButton"
+                android:text="@string/plus"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textSize="24sp" />
         </TableRow>
     </TableLayout>
 
