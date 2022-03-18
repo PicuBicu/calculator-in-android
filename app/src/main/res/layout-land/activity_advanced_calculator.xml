@@ -10,14 +10,22 @@
     <TextView
         android:id="@+id/adv_equationTextView"
         android:layout_width="0dp"
-        android:layout_height="150sp"
+        android:layout_height="0dp"
         android:text=""
         android:textAlignment="viewEnd"
         android:textColor="@color/white"
         android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@id/guideline5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="100dp" />
 
     <TableLayout
         android:id="@+id/tableLayout2"
@@ -26,7 +34,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/adv_equationTextView">
+        app:layout_constraintTop_toBottomOf="@id/guideline5">
 
         <TableRow
             android:layout_width="match_parent"
@@ -58,90 +66,6 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/sign"
-                android:textColor="@android:color/holo_orange_dark" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-
-            <Button
-                android:id="@+id/adv_sinButton"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/sin"
-                android:textColor="@android:color/holo_orange_dark" />
-
-            <Button
-                android:id="@+id/adv_cosButton"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/cos"
-                android:textColor="@android:color/holo_orange_dark" />
-
-            <Button
-                android:id="@+id/adv_tanButton"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/tan"
-                android:textColor="@android:color/holo_orange_dark" />
-
-            <Button
-                android:id="@+id/adv_lnButton"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/ln"
-                android:textColor="@android:color/holo_orange_dark" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-
-            <Button
-                android:id="@+id/adv_sqrtButton"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/sqrt"
-                android:textColor="@android:color/holo_orange_dark" />
-
-            <Button
-                android:id="@+id/adv_x2Button"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/x_2"
-                android:textColor="@android:color/holo_orange_dark" />
-
-            <Button
-                android:id="@+id/adv_xyButton"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/x_y"
-                android:textColor="@android:color/holo_orange_dark" />
-
-            <Button
-                android:id="@+id/adv_logButton"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/log"
                 android:textColor="@android:color/holo_orange_dark" />
         </TableRow>
 
@@ -186,6 +110,24 @@
                 android:text="@string/divide"
                 android:textColor="@android:color/holo_orange_dark" />
 
+            <Button
+                android:id="@+id/adv_sinButton"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/sin"
+                android:textColor="@android:color/holo_orange_dark" />
+
+            <Button
+                android:id="@+id/adv_cosButton"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/cos"
+                android:textColor="@android:color/holo_orange_dark" />
+
         </TableRow>
 
         <TableRow
@@ -228,6 +170,25 @@
                 android:layout_weight="1"
                 android:text="@string/multiply"
                 android:textColor="@android:color/holo_orange_dark" />
+
+            <Button
+                android:id="@+id/adv_tanButton"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/tan"
+                android:textColor="@android:color/holo_orange_dark" />
+
+            <Button
+                android:id="@+id/adv_sqrtButton"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/sqrt"
+                android:textColor="@android:color/holo_orange_dark" />
+
         </TableRow>
 
         <TableRow
@@ -270,6 +231,24 @@
                 android:layout_weight="1"
                 android:text="@string/minus"
                 android:textColor="@android:color/holo_orange_dark" />
+
+            <Button
+                android:id="@+id/adv_lnButton"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/ln"
+                android:textColor="@android:color/holo_orange_dark" />
+
+            <Button
+                android:id="@+id/adv_x2Button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/x_2"
+                android:textColor="@android:color/holo_orange_dark" />
         </TableRow>
 
         <TableRow
@@ -311,6 +290,24 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/plus"
+                android:textColor="@android:color/holo_orange_dark" />
+
+            <Button
+                android:id="@+id/adv_logButton"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/log"
+                android:textColor="@android:color/holo_orange_dark" />
+
+            <Button
+                android:id="@+id/adv_xyButton"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/x_y"
                 android:textColor="@android:color/holo_orange_dark" />
         </TableRow>
     </TableLayout>
