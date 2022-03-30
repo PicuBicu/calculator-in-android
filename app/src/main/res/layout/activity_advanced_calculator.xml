@@ -56,9 +56,19 @@
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="2"
+                android:layout_weight="1"
                 android:onClick="handleButton"
                 android:text="@string/c"
+                android:textColor="@android:color/holo_orange_dark" />
+
+            <Button
+                android:id="@+id/adv_leftBracket"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="handleButton"
+                android:text="@string/bracket"
                 android:textColor="@android:color/holo_orange_dark" />
 
             <Button
@@ -71,25 +81,6 @@
                 android:text="@string/sign"
                 android:textColor="@android:color/holo_orange_dark" />
 
-            <Button
-                android:id="@+id/adv_leftBracket"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:onClick="handleButton"
-                android:text="@string/leftBracket"
-                android:textColor="@android:color/holo_orange_dark" />
-
-            <Button
-                android:id="@+id/adv_rightBracket"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:onClick="handleButton"
-                android:text="@string/rightBracket"
-                android:textColor="@android:color/holo_orange_dark" />
         </TableRow>
 
         <TableRow
