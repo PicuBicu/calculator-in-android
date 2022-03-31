@@ -11,6 +11,7 @@
         android:id="@+id/smp_equationTextView"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:maxLength="35"
         android:text=""
         android:textAlignment="viewEnd"
         android:textColor="@color/white"
