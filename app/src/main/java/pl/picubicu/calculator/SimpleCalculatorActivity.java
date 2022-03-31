@@ -1,8 +1,6 @@
 package pl.picubicu.calculator;
 
 import android.os.Bundle;
-import android.text.Editable;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -11,16 +9,18 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import org.mariuszgromada.math.mxparser.Expression;
+import org.mariuszgromada.math.mxparser.mXparser;
 
 public class SimpleCalculatorActivity extends AppCompatActivity {
 
-    private final String MATH_OPERATOR_PATTERN_STR = "[*+\\/-]+|[A-Za-z]+";
+    private final String MATH_OPERATOR_PATTERN_STR = "[*+\\/-]+";
     private TextView resultTextView;
     private boolean isDotPlaced = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mXparser.enableAlmostIntRounding();
         setContentView(R.layout.activity_simple_calculator);
         this.resultTextView = findViewById(R.id.smp_equationTextView);
     }
@@ -38,70 +38,79 @@ public class SimpleCalculatorActivity extends AppCompatActivity {
     }
 
     public void handleButton(View view) {
-        Button clickedButton = (Button) view;
-        String sign = clickedButton.getText().toString();
-        switch (sign) {
-            case "0":
-                addZero();
-                break;
-            case ".":
-                addDotSign();
-                break;
-            case "=":
-                calculateExpression();
-                break;
-            case "c":
-                resetExpression();
-                break;
-            case "bksp":
-                removeSignFromExpression(); // TODO: sprawdzić znak i ustawić flage
-                break;
-            case "+/-":
-                changeNumberSign();
-                break;
-            default:
-                addSignToExpression(clickedButton);
-                break;
-        }
-    }
-
-    private void changeNumberSign() {
-        String expression = this.resultTextView.getText().toString();
-        if (!expression.isEmpty()) {
-            String[] tokens = expression.split(MATH_OPERATOR_PATTERN_STR);
-            String lastToken = tokens[tokens.length - 1];
-            int position = expression.lastIndexOf(lastToken);
-            // Getting element before last token
-            if (position - 1 > 0) {
-                char charBefore = this.resultTextView.getText().charAt(position - 1);
-                char sign = ' ';
-                if (charBefore == '-') {
-                    sign = '+';
+        try {
+            String btnValue = ((Button) view).getText().toString();
+            String exprValue = this.resultTextView.getText().toString();
+            if (exprValue.isEmpty() && (Character.isDigit(btnValue.charAt(0)) || btnValue.charAt(0) == '-')) {
+                this.resultTextView.append(btnValue);
+            } else if (!exprValue.isEmpty()) {
+                if (btnValue.equals("0")) {
+                    addZero(exprValue);
+                } else if (btnValue.equals(".")) {
+                    addDot(exprValue);
+                } else if (btnValue.equals("=")) {
+                    calculateExpression(exprValue);
+                } else if (btnValue.equals("c")) {
+                    resetExpression();
+                } else if (btnValue.equals("bksp")) {
+                    removeSign(exprValue);
+                } else if (btnValue.equals("+/-")) {
+                    changeNumberSign(exprValue);
+                } else if (Character.isDigit(btnValue.charAt(0))) {
+                    addDigit(exprValue, btnValue);
+                } else {
+                    addMathOperator(exprValue, btnValue);
                 }
-                else if (charBefore == '+') {
-                    sign = '-';
-                }
-                else {
-                    return;
-                }
-                StringBuilder stringBuilder = new StringBuilder(expression);
-                stringBuilder.setCharAt(position - 1, sign);
-                this.resultTextView.setText(stringBuilder.toString());
             }
+        } catch (Exception exp) {
+            makeToast(getString(R.string.expression_not_valid));
+        }
+
+    }
+
+    private String parseLastToken(String exprValue) {
+        String[] tokens = exprValue.split(MATH_OPERATOR_PATTERN_STR);
+        return tokens.length > 0 ? tokens[tokens.length - 1] : "";
+    }
+
+    private char determineChar(char charBefore) {
+        if (charBefore == '-') {
+            return '+';
+        } else if (charBefore == '+') {
+            return '-';
+        }
+        return '-';
+    }
+
+    private void changeNumberSign(String exprValue) {
+        String[] tokens = exprValue.split(MATH_OPERATOR_PATTERN_STR);
+        if ((tokens.length == 1 || tokens.length == 2) && exprValue.charAt(0) == '-') {
+            exprValue = exprValue.replace("-", "");
+            this.resultTextView.setText(exprValue);
+        } else if (tokens.length == 1 && Character.isDigit(exprValue.charAt(0))) {
+            StringBuilder stringBuilder = new StringBuilder(exprValue);
+            stringBuilder.insert(0, '-');
+            this.resultTextView.setText(stringBuilder.toString());
+        } else {
+            String lastToken = parseLastToken(exprValue);
+            int position = exprValue.lastIndexOf(lastToken);
+            char charBefore = exprValue.charAt(position - 1);
+            StringBuilder stringBuilder = new StringBuilder(exprValue);
+            if (charBefore == '-' && (exprValue.charAt(position - 2) == '/' || exprValue.charAt(position - 2) == '*')) {
+                stringBuilder.replace(position - 1, position, "");
+            } else if (charBefore == '+' || charBefore == '-') {
+                stringBuilder.setCharAt(position - 1, determineChar(charBefore));
+            } else {
+                stringBuilder.insert(position, '-');
+            }
+            this.resultTextView.setText(stringBuilder.toString());
         }
     }
 
-    private void addZero() {
-        String expression = this.resultTextView.getText().toString();
-        int length = expression.length();
-        // If no signs have been put already
-        if (length == 0) {
-            this.resultTextView.append("0");
-            return;
-        }
-        // If last char is dot or number but not 0 or operator
-        char lastChar = expression.charAt(length - 1);
-        if ((Character.isDigit(lastChar) && lastChar != '0')
+    private void addZero(String exprValue) {
+        String lastToken = parseLastToken(exprValue);
+        char lastChar = exprValue.charAt(exprValue.length() - 1);
+        if ((Character.isDigit(lastChar) && lastToken.charAt(0) != '0')
                 || (isDot(lastChar) && hasDotBeenPlacedAlready())
                 || isMathOperator(lastChar)
                 || (Character.isDigit(lastChar) && hasDotBeenPlacedAlready())) {
@@ -109,34 +118,27 @@ public class SimpleCalculatorActivity extends AppCompatActivity {
         }
     }
 
-    private void addDotSign() {
-        String expression = this.resultTextView.getText().toString();
-        if (!expression.isEmpty()) {
-            String[] tokens = expression.split(MATH_OPERATOR_PATTERN_STR);
-            String lastToken = tokens[tokens.length - 1];
-            if (Character.isDigit(expression.charAt(expression.length() - 1))) {
-                try {
-                    Float.parseFloat(lastToken + ".");
-                    this.resultTextView.append(".");
-                    this.isDotPlaced = true;
-                } catch (NumberFormatException e) {
-                    makeToast("Dot is already in current number");
-                }
+    private void addDot(String exprValue) {
+        String lastToken = parseLastToken(exprValue);
+        if (Character.isDigit(exprValue.charAt(exprValue.length() - 1))) {
+            try {
+                Float.parseFloat(lastToken + ".");
+                this.resultTextView.append(".");
+                this.isDotPlaced = true;
+            } catch (NumberFormatException e) {
+                makeToast("Dot is already in current number");
             }
         }
     }
 
-    private void removeSignFromExpression() {
-        String expression = this.resultTextView.getText().toString();
-        if (!expression.isEmpty()) {
-            int length = expression.length();
-            char lastChar = expression.charAt(length - 1);
-            if (isDot(lastChar)) {
-                isDotPlaced = false;
-            }
-            String newExpression = expression.substring(0, length - 1);
-            this.resultTextView.setText(newExpression);
+    private void removeSign(String exprValue) {
+        int length = exprValue.length();
+        char lastChar = exprValue.charAt(length - 1);
+        if (isDot(lastChar)) {
+            isDotPlaced = false;
         }
+        String newExpression = exprValue.substring(0, length - 1);
+        this.resultTextView.setText(newExpression);
     }
 
     private void resetExpression() {
@@ -153,59 +155,40 @@ public class SimpleCalculatorActivity extends AppCompatActivity {
     }
 
     private boolean isMathOperator(char sign) {
-        return sign == '+' ||
-                sign == '-' ||
-                sign == '*' ||
-                sign == '/';
+        return (sign + "").matches("[*+\\/-]+|[A-Za-z]+");
     }
 
-    private void addSignToExpression(Button button) {
-        CharSequence newText = button.getText();
-        int length = this.resultTextView.length();
-        // No signs have been put yet
-        if (length == 0) {
-            if (Character.isDigit(newText.charAt(0))) {
-                this.resultTextView.append(newText);
-            }
-            return;
+    private void addDigit(String exprValue, String btnValue) {
+        int length = exprValue.length();
+        char lastChar = exprValue.charAt(length - 1);
+        if (Character.isDigit(lastChar)
+                || (isDot(lastChar) && hasDotBeenPlacedAlready())
+                || isMathOperator(lastChar)
+        ) {
+            this.resultTextView.append(btnValue);
         }
-        char lastChar = this.resultTextView.getText().charAt(length - 1);
-        // If sign is number
-        if (Character.isDigit(newText.charAt(0))) {
-            if (Character.isDigit(lastChar)
-                    || (isDot(lastChar) && hasDotBeenPlacedAlready())
-                    || isMathOperator(lastChar)
-            ) {
-                this.resultTextView.append(newText);
-            }
-        }
-        // If sign is math operator
-        else if (Character.isDigit(lastChar)) {
-            this.resultTextView.append(newText);
-            // because now we can place dot in new float number after math operator
+    }
+
+    private void addMathOperator(String exprValue, String btnValue) {
+        char lastChar = exprValue.charAt(exprValue.length() - 1);
+        if (Character.isDigit(lastChar)) {
+            this.resultTextView.append(btnValue);
             isDotPlaced = false;
         }
     }
 
-    private void calculateExpression() {
-        String textViewExpression = this.resultTextView.getText().toString();
-        if (!textViewExpression.isEmpty()) {
-            Expression expression = new Expression(textViewExpression);
-            double expressionResult = expression.calculate();
-            if (Double.isNaN(expressionResult)) {
-                makeToast(getResources().getString(R.string.expression_not_valid));
-            } else {
-                this.resultTextView.setText(String.valueOf(expressionResult));
-                this.isDotPlaced = true;
-            }
+    private void calculateExpression(String exprValue) {
+        Expression expression = new Expression(exprValue);
+        double expressionResult = expression.calculate();
+        if (Double.isNaN(expressionResult)) {
+            makeToast(getResources().getString(R.string.expression_not_valid));
+        } else {
+            this.resultTextView.setText(String.valueOf(expressionResult));
+            this.isDotPlaced = true;
         }
     }
 
     private void makeToast(String message) {
-        Toast.makeText(
-                this,
-                message,
-                Toast.LENGTH_SHORT
-        ).show();
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 }
