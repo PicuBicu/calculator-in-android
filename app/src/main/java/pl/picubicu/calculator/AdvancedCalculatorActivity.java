@@ -185,6 +185,10 @@ public class AdvancedCalculatorActivity extends AppCompatActivity {
     private void addDigit(String exprValue, String btnValue) {
         int length = exprValue.length();
         char lastChar = exprValue.charAt(length - 1);
+        String lastToken = parseLastToken(exprValue);
+        if (lastToken.charAt(0) == '0' && lastToken.length() == 1) {
+            return;
+        }
         if (Character.isDigit(lastChar)
                 || (isDot(lastChar) && hasDotBeenPlacedAlready())
                 || isMathOperator(lastChar)
