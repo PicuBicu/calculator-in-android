@@ -47,6 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:onClick="handleButton"
                 android:text="@string/backspace"
                 android:textColor="@android:color/holo_orange_dark"
                 android:textSize="18dp" />
@@ -57,6 +58,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="2"
+                android:onClick="handleButton"
                 android:text="@string/c"
                 android:textColor="@android:color/holo_orange_dark"
                 android:textSize="18dp" />
@@ -67,7 +69,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:onClick="handleButton"
                 android:text="@string/sign"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/adv_signButton2"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="handleButton"
+                android:text="@string/bracket"
                 android:textColor="@android:color/holo_orange_dark"
                 android:textSize="18dp" />
         </TableRow>
@@ -83,6 +97,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:onClick="handleButton"
                 android:text="@string/seven"
                 android:textColor="@color/white"
                 android:textSize="18dp" />
@@ -93,6 +108,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:onClick="handleButton"
                 android:text="@string/eight"
                 android:textColor="@color/white"
                 android:textSize="18dp" />
@@ -103,6 +119,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:onClick="handleButton"
                 android:text="@string/nine"
                 android:textColor="@color/white"
                 android:textSize="18dp" />
@@ -113,6 +130,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:onClick="handleButton"
                 android:text="@string/divide"
                 android:textColor="@android:color/holo_orange_dark"
                 android:textSize="18dp" />
@@ -123,6 +141,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:onClick="handleButton"
                 android:text="@string/sin"
                 android:textColor="@android:color/holo_orange_dark"
                 android:textSize="18dp" />
@@ -133,6 +152,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:onClick="handleButton"
                 android:text="@string/cos"
                 android:textColor="@android:color/holo_orange_dark"
                 android:textSize="18dp" />
@@ -150,6 +170,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:onClick="handleButton"
                 android:text="@string/four"
                 android:textColor="@color/white"
                 android:textSize="18dp" />
@@ -160,6 +181,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:onClick="handleButton"
                 android:text="@string/five"
                 android:textColor="@color/white"
                 android:textSize="18dp" />
@@ -170,6 +192,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:onClick="handleButton"
                 android:text="@string/six"
                 android:textColor="@color/white"
                 android:textSize="18dp" />
@@ -180,6 +203,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:onClick="handleButton"
                 android:text="@string/multiply"
                 android:textColor="@android:color/holo_orange_dark"
                 android:textSize="18dp" />
@@ -190,6 +214,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:onClick="handleButton"
                 android:text="@string/tan"
                 android:textColor="@android:color/holo_orange_dark"
                 android:textSize="18dp" />
@@ -200,6 +225,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:onClick="handleButton"
                 android:text="@string/sqrt"
                 android:textColor="@android:color/holo_orange_dark"
                 android:textSize="18dp" />
@@ -217,6 +243,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:onClick="handleButton"
                 android:text="@string/one"
                 android:textColor="@color/white"
                 android:textSize="18dp" />
@@ -227,6 +254,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:onClick="handleButton"
                 android:text="@string/two"
                 android:textColor="@color/white"
                 android:textSize="18dp" />
@@ -237,6 +265,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:onClick="handleButton"
                 android:text="@string/three"
                 android:textColor="@color/white"
                 android:textSize="18dp" />
@@ -247,6 +276,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:onClick="handleButton"
                 android:text="@string/minus"
                 android:textColor="@android:color/holo_orange_dark"
                 android:textSize="18dp" />
@@ -257,6 +287,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:onClick="handleButton"
                 android:text="@string/ln"
                 android:textColor="@android:color/holo_orange_dark"
                 android:textSize="18dp" />
@@ -267,6 +298,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:onClick="handleButton"
                 android:text="@string/x_2"
                 android:textColor="@android:color/holo_orange_dark"
                 android:textSize="18dp" />
@@ -283,6 +315,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:onClick="handleButton"
                 android:text="@string/zero"
                 android:textColor="@color/white"
                 android:textSize="18dp" />
@@ -293,6 +326,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:onClick="handleButton"
                 android:text="@string/dot"
                 android:textColor="@color/white"
                 android:textSize="18dp" />
@@ -303,6 +337,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:onClick="handleButton"
                 android:text="@string/equals"
                 android:textColor="@color/white"
                 android:textSize="18dp" />
@@ -313,6 +348,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:onClick="handleButton"
                 android:text="@string/plus"
                 android:textColor="@android:color/holo_orange_dark"
                 android:textSize="18dp" />
@@ -323,6 +359,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:onClick="handleButton"
                 android:text="@string/log"
                 android:textColor="@android:color/holo_orange_dark"
                 android:textSize="18dp" />
@@ -333,6 +370,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:onClick="handleButton"
                 android:text="@string/x_y"
                 android:textColor="@android:color/holo_orange_dark"
                 android:textSize="18dp" />

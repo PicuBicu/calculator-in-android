@@ -34,5 +34,5 @@
     <string name="x_2">x^2</string>
     <string name="x_y">x^y</string>
     <string name="expression_not_valid">Your expression is not valid</string>
-    <string name="bracket">()</string>
+    <string name="bracket">)</string>
 </resources>
