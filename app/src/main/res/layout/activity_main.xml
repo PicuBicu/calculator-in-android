@@ -37,6 +37,7 @@
             android:width="150sp"
             android:text="@string/simple"
             android:textColor="@android:color/holo_orange_dark"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -49,6 +50,7 @@
             android:width="150sp"
             android:text="@string/about"
             android:textColor="@android:color/holo_orange_dark"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/advancedButton" />
@@ -61,6 +63,7 @@
             android:width="150sp"
             android:text="@string/advanced"
             android:textColor="@android:color/holo_orange_dark"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/simpleButton" />
@@ -73,6 +76,7 @@
             android:width="150sp"
             android:text="@string/exit"
             android:textColor="@android:color/holo_orange_dark"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
