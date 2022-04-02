@@ -15,7 +15,7 @@
         android:text=""
         android:textAlignment="viewEnd"
         android:textColor="@color/white"
-        android:textSize="34sp"
+        android:textSize="@dimen/result_text_size"
         app:layout_constraintBottom_toTopOf="@id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,7 +51,7 @@
                 android:onClick="handleButton"
                 android:text="@string/backspace"
                 android:textColor="@android:color/holo_orange_dark"
-                android:textSize="24sp" />
+                android:textSize="@dimen/btn_text_size" />
 
             <Button
                 android:id="@+id/smp_cButton"
@@ -62,7 +62,7 @@
                 android:onClick="handleButton"
                 android:text="@string/c"
                 android:textColor="@android:color/holo_orange_dark"
-                android:textSize="24sp" />
+                android:textSize="@dimen/btn_text_size" />
 
             <Button
                 android:id="@+id/smp_signButton"
@@ -73,7 +73,7 @@
                 android:onClick="handleButton"
                 android:text="@string/sign"
                 android:textColor="@android:color/holo_orange_dark"
-                android:textSize="24sp" />
+                android:textSize="@dimen/btn_text_size" />
         </TableRow>
 
         <TableRow
@@ -90,7 +90,7 @@
                 android:onClick="handleButton"
                 android:text="@string/seven"
                 android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:textSize="@dimen/btn_text_size" />
 
             <Button
                 android:id="@+id/smp_eightButton"
@@ -101,7 +101,7 @@
                 android:onClick="handleButton"
                 android:text="@string/eight"
                 android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:textSize="@dimen/btn_text_size" />
 
             <Button
                 android:id="@+id/smp_nineButton"
@@ -112,7 +112,7 @@
                 android:onClick="handleButton"
                 android:text="@string/nine"
                 android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:textSize="@dimen/btn_text_size" />
 
             <Button
                 android:id="@+id/smp_divideButton"
@@ -123,7 +123,7 @@
                 android:onClick="handleButton"
                 android:text="@string/divide"
                 android:textColor="@android:color/holo_orange_dark"
-                android:textSize="24sp" />
+                android:textSize="@dimen/btn_text_size" />
 
         </TableRow>
 
@@ -141,7 +141,7 @@
                 android:onClick="handleButton"
                 android:text="@string/four"
                 android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:textSize="@dimen/btn_text_size" />
 
             <Button
                 android:id="@+id/smp_fiveButton"
@@ -152,7 +152,7 @@
                 android:onClick="handleButton"
                 android:text="@string/five"
                 android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:textSize="@dimen/btn_text_size" />
 
             <Button
                 android:id="@+id/smp_sixButton"
@@ -163,7 +163,7 @@
                 android:onClick="handleButton"
                 android:text="@string/six"
                 android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:textSize="@dimen/btn_text_size" />
 
             <Button
                 android:id="@+id/smp_multiplyButton"
@@ -174,7 +174,7 @@
                 android:onClick="handleButton"
                 android:text="@string/multiply"
                 android:textColor="@android:color/holo_orange_dark"
-                android:textSize="24sp" />
+                android:textSize="@dimen/btn_text_size" />
         </TableRow>
 
         <TableRow
@@ -191,7 +191,7 @@
                 android:onClick="handleButton"
                 android:text="@string/one"
                 android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:textSize="@dimen/btn_text_size" />
 
             <Button
                 android:id="@+id/smp_twoButton"
@@ -202,7 +202,7 @@
                 android:onClick="handleButton"
                 android:text="@string/two"
                 android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:textSize="@dimen/btn_text_size" />
 
             <Button
                 android:id="@+id/smp_threeButton"
@@ -213,7 +213,7 @@
                 android:onClick="handleButton"
                 android:text="@string/three"
                 android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:textSize="@dimen/btn_text_size" />
 
             <Button
                 android:id="@+id/smp_minusButton"
@@ -224,7 +224,7 @@
                 android:onClick="handleButton"
                 android:text="@string/minus"
                 android:textColor="@android:color/holo_orange_dark"
-                android:textSize="24sp" />
+                android:textSize="@dimen/btn_text_size" />
 
         </TableRow>
 
@@ -242,7 +242,7 @@
                 android:onClick="handleButton"
                 android:text="@string/zero"
                 android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:textSize="@dimen/btn_text_size" />
 
             <Button
                 android:id="@+id/smp_dotButton"
@@ -253,7 +253,7 @@
                 android:onClick="handleButton"
                 android:text="@string/dot"
                 android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:textSize="@dimen/btn_text_size" />
 
             <Button
                 android:id="@+id/smp_equalsButton"
@@ -264,7 +264,7 @@
                 android:onClick="handleButton"
                 android:text="@string/equals"
                 android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:textSize="@dimen/btn_text_size" />
 
             <Button
                 android:id="@+id/smp_plusButton"
@@ -275,7 +275,7 @@
                 android:onClick="handleButton"
                 android:text="@string/plus"
                 android:textColor="@android:color/holo_orange_dark"
-                android:textSize="24sp" />
+                android:textSize="@dimen/btn_text_size" />
         </TableRow>
     </TableLayout>
 
